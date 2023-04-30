@@ -1,5 +1,5 @@
 import { nanoid } from "nanoid"
-import notes from "./notes"
+import notes from "./notes.js"
 
 const addNoteHandler = (request, h) => {
     const { title, tags, body } = request.payload
