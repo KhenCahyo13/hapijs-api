@@ -1,4 +1,4 @@
-const { addNoteHandler, getAllNotesHandler, getNoteByIdHandler, editNoteByIdHandler, deleteNoteByIdHandler } = require("./handler")
+import { addNoteHandler, getAllNotesHandler, getNoteByIdHandler, editNoteByIdHandler,deleteNoteByIdHandler } from './handler.js'
 
 const routes = [
     {
@@ -28,4 +28,4 @@ const routes = [
     },
 ]
 
-module.exports = routes
+export { routes }

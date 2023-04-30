@@ -1,8 +1,8 @@
-const Hapi = require('@hapi/hapi')
-const routes = require('./routes')
+import { Server } from '@hapi/hapi'
+import { routes } from './routes.js'
 
 const init = async () => {
-  const server = Hapi.server({
+  const server = Server({
     port: 5000,
     host: process.env.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0',
     routes: {

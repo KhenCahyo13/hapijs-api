@@ -1,5 +1,4 @@
 import { nanoid } from "nanoid"
-const notes = require("./notes")
 
 const addNoteHandler = (request, h) => {
     const { title, tags, body } = request.payload
@@ -92,8 +91,8 @@ const editNoteByIdHandler = (request, h) => {
     });
     response.code(404);
     return response;
-  };
-  const deleteNoteByIdHandler = (request, h) => {
+};
+const deleteNoteByIdHandler = (request, h) => {
     const { id } = request.params;
    
     const index = notes.findIndex((note) => note.id === id);
@@ -114,6 +113,12 @@ const editNoteByIdHandler = (request, h) => {
     });
     response.code(404);
     return response;
-  };
+};
 
-module.exports = { addNoteHandler, getAllNotesHandler, getNoteByIdHandler, editNoteByIdHandler, deleteNoteByIdHandler }
+export {
+  addNoteHandler,
+  getAllNotesHandler,
+  getNoteByIdHandler,
+  deleteNoteByIdHandler,
+  editNoteByIdHandler
+}
